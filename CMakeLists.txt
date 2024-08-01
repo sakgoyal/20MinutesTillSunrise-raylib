@@ -23,6 +23,7 @@ target_precompile_headers( ${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/src/pch
 
 # /Qspectre
 # /fsanitize-address-use-after-return /fsanitize=address
+set(CMAKE_INTERPROCEDURAL_OPTIMIZATION ON)
 target_compile_options(${PROJECT_NAME} PRIVATE /W4 /Wall /WX /EHa /EHc /options:strict /Ot /sdl /RTC1 /RTCs /RTCu /permissive- /Za /analyze)
 
 add_custom_command(
